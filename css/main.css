@@ -1,0 +1,29 @@
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+#input_line {
+    padding: 10px;
+}
+
+#button {
+    display: flex;
+    }
+
+#car_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: space-around;
+    list-style-type: none;
+
+}
+
+.car-list-item {
+    width:fit-content;
+    margin: 1.2rem;
+    padding: 1rem;
+    background: darkolivegreen;
+    color: white;
+}
+

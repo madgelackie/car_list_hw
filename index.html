@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
     <script src="js/app.js"></script>
     <title>listing app</title>
 </head>
 <body>
-    <header>EV car list 2021</header>
+    <h2>EV car list 2021</h2>
     <br>
     <form id="new-item-form">
-        <div>
+    <div class="inputs_form">
+        <div id='input_line'>
             <label for="manufacturer">Manufacturer : </label>
             <select id="manufacturer">
                 <option value="" disabled selected></option>
@@ -28,29 +30,30 @@
             </select>
         </div>
 
-        <div>
+        <div id='input_line'>
             <label for="model">Model : </label>
-            <input type="model" id="model" required>
+            <input type="text" id="model" required>
         </div>
 
-        <div>
+        <div id='input_line'>
             <label for="battery_range">Battery range (miles) : </label>
-            <input type="battery_range" id="battery_range" required>
+            <input type="number" id="battery_range" required>
         </div>
 
-        <div>
+        <div id='input_line'>
             <label for="battery_size">Battery size (kWh): </label>
-            <input type="battery_size" id="battery_size" required>
+            <input type="number" id="battery_size" required>
         </div>
-
+    </div>
+<div id='buttons'>
         <input type="submit" value="Submit car">
     </form>
 
     <button id="delete_all">Delete All</button>
-
-    <div>
+</div>
         <h2>Your list:</h2>
+<div id="list-area">
         <ul id="car_list"></ul>
-    </div>
+</div>
 </body>
 </html>
