@@ -1,12 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('JS loaded');
 
-    // setting up listener: what action it is listening for and what element this
-    // is attached to and what happens when the event occurs.
+    // setting up listener: what action it is listening for, what element this is attached to and what happens when the event occurs.
 
-
-    // Activated once 'submit' event attached to new--item-form occurs:
-    // grabs data from the form 
+    // Activated once 'submit' event attached to new-item-form occurs. 
+    // Grabs data from the form 
     const handleNewItemData = function(event) {
         event.preventDefault();
 
@@ -18,21 +16,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // create element to attach the data to:
         const newListItem = document.createElement('li');
 
-    // create the child element for each piece of data from the form and attach it to the newListItem element 
-        const manufacturerElement = document.createElement('h2');
-        manufacturerElement.textContent = manufacturer;
+    // create the (child) element for each piece of data from the form and attach it to the newListItem element 
+        const manufacturerElement = document.createElement('h3');
+        manufacturerElement.textContent = `Manufacturer: ${manufacturer}`;
         newListItem.appendChild(manufacturerElement);
 
-        const modelElement = document.createElement('h2');
-        modelElement.textContent = model;
+        const modelElement = document.createElement('h3');
+        modelElement.textContent = `Model: ${model}`;
         newListItem.appendChild(modelElement);
 
-        const battery_rangeElement = document.createElement('h2');
-        battery_rangeElement.textContent = 'Range '; battery_range;
+        const battery_rangeElement = document.createElement('h3');
+        battery_rangeElement.textContent = `Battery range: ${battery_range}`;
         newListItem.appendChild(battery_rangeElement);
         
-        const battery_sizeElement = document.createElement('h2');
-        battery_sizeElement.textContent = battery_size;
+        const battery_sizeElement = document.createElement('h3');
+        battery_sizeElement.textContent = `Battery size: ${battery_size}`;
         newListItem.appendChild(battery_sizeElement);
 
     // attach this new element to the DOM
